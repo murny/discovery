@@ -55,3 +55,12 @@ group :test, :development do
   gem 'simplecov', :require => false
   gem "factory_girl", "~> 4.0"
 end
+
+group :development do
+  gem 'better_errors', '>= 2.3.0'
+  gem 'binding_of_caller'
+
+  gem 'brakeman'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
+end
