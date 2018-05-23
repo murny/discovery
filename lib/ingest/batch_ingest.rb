@@ -4,7 +4,7 @@ class BatchIngest
   attr_writer :ingester, :root, :namespace, :record_delimiter
 
   def initialize(args ={})
-    @solr_url = args[:solr_url]
+    @solr_url = ENV['SOLR_URL'] || args[:solr_url]
   end
 
   def from_file(file, vocabulary)

@@ -49,7 +49,7 @@ task :ingest, [:collection] do |t, args|
 end
 
 def ingest_mods_or_dublin_core
-  batch_ingester = BatchIngest.new(solr_url: @c.solr)
+  batch_ingester = BatchIngest.new(solr_url: ENV['SOLR_URL'] || @c.solr)
   configure batch_ingester
   run batch_ingester
 end
